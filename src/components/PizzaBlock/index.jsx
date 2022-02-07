@@ -13,16 +13,6 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
 
   const onSelectType = (index) => {
     setActiveType(index);
-    switch (availableTypes[index]) {
-      case 'тонкое':
-        setResultPrice(price+35)
-        break;
-      case 'традиционное':
-        setResultPrice(price)
-        break;
-      default:
-        setResultPrice(price)
-    }
   };
 
   const onSelectSize = (index) => {
