@@ -4,7 +4,7 @@ const router = jsonServer.router('./db.json');
 const middlewares = jsonServer.defaults({
   static: './build'
 });
-const PORT = process.env.REACT_APP_PORT;
+const PORT = process.env.PORT;
 server.use(middlewares);
 server.use(jsonServer.rewriter({
   '/pizzas/*': '/$1',
